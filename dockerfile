@@ -18,6 +18,8 @@
 
 FROM node:20
 
+RUN npm install -g nodemon
+
 WORKDIR /index
 
 COPY . /index
@@ -26,7 +28,7 @@ RUN npm install
 
 EXPOSE 3004
 
-CMD ["node","index.js"]
+CMD ["npm","run","dev"]
 
 
 
